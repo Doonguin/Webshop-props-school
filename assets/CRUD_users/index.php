@@ -36,7 +36,10 @@ include 'db.php';
         <label for="Pprice">Email:</label>
         <input type="email" class="form-control m-2" id="Pprice" name="email">
         <label for="Pdesc">Role:</label>
-        <input type="text" class="form-control m-2" id="Pdesc" name="role">
+        <select class="form-control form-select m-2" id="Pdesc" name="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
         <button type="submit" class="btn btn-primary">Add</button>
     </form>
 </body>

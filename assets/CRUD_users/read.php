@@ -14,7 +14,11 @@ while($row = $result->fetch_assoc()) {
         echo '<td><input type="text" class="form-control" name="user_name" value="'. $row['user_name'] .'"></td>';
         echo '<td><input type="email" class="form-control" name="email" value="'. $row['email'] .'"></td>';
         echo "<td>" . $row['registered_on'] . "</td>";
-        echo '<td><input type="text" class="form-control" name="role" value="'. $row['role'] .'"></td>';
+        echo '<td><select class="form-control form-select" name="role">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    </select>
+              </td>';
         echo '<td><button type="submit" class="btn btn-primary">Save</button></td>';
         echo '<input type="hidden" name="id" value="'. $row['ID'] .'">';
         echo '</form>';
